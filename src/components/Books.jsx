@@ -1,5 +1,3 @@
-
-
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import BookCard from './BookCard'
@@ -9,7 +7,7 @@ const Books = ({ role }) => {
   const [books, setBooks] = useState([])
   
   useEffect(() => {
-    axios.get('http://bookstore-api.onrender.com/book/books')
+    axios.get('http://localhost:3001/book/books')
       .then(res => {
         setBooks(res.data)
         console.log(res.data)

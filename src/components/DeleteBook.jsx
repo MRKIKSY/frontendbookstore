@@ -6,7 +6,7 @@ const DeleteBook = () => {
     const navigate = useNavigate()
     const {id} = useParams()
     useEffect(() => {
-      axios.delete('http://bookstore-api.onrender.com/book/book/'+id)
+      axios.delete('http://localhost:5173/book/book/'+id)
       .then(res => {
           if(res.data.deleted) {
               navigate('/books')
